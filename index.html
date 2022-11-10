@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Currency Calculator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <script src="scripts/calculator.js"></script>
 </head>
 <body>
     <div id="header">
         <h1>Currency Calculator</h1>
-        <p>This currency calcultor show the exchange rate table for 2 currencies</p>
+        <p>This currency calculator shows the exchange rate table for 2 currencies</p>
     </div>
-    <div id="calculator">
+    <div>
         <p>Currency 1:</p>
         <input type="text" id="curr1">
 
         <p>Currency 2:</p>
         <input type="text" id="curr2">
-        <button id="swapcurr">Swap Currencies</button>
+        <button id="swap_currency_button">Swap Currencies</button>
 
         <p>Exchange rate:</p>
-        <input type="number" step="0.01" id="rate">
-        <button id="calctable">Calculate Table</button>
+        <input type="number" step="0.01" id="exchange_rate">
+        <button id="calculate_table">Calculate Table</button>
 
-        <p id="exchangerate">Exchange rate  /  = </p>
+        <p id="exchange_rate_label">Exchange rate  /  = </p>
     </div>
     <div>
-        <table id="table">
-            <tb></tb>
+        <table id="currency_table">
+
         </table>
     </div>
 </body>

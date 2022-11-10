@@ -2,9 +2,9 @@ body {
     display: inline;
     width: 100%;
     height: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
     text-align: center;
-    background: #bdc3c7;
+    background: #ecf0f1;
 }
 
 #header {
@@ -16,6 +16,41 @@ body {
     text-align: left;
 }
 
-table, th, tr{
-    border: 1px solid;
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    background: #f1c40f;
+    border: solid 1px;
+}
+
+#upto10 {
+    background: #2ecc71;
+}
+
+#upto10:nth-child(odd) {
+    background: #249f58;
+}
+
+#upto100 {
+    background: #3498db;
+}
+
+#upto100:nth-child(odd) {
+    background: #256c9b;
+}
+
+#upto1000 {
+    background: #9b59b6;
+}
+
+#upto1000:nth-child(odd) {
+    background: #6e4081;
+}
+
+#upto10:hover, #upto100:hover, #upto1000:hover {
+    background: #a2ced0;
+}
+
+td:hover {
+    background: #6a9b9b;
 }
