@@ -1,0 +1,21 @@
+body {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    text-align: center;
+    background: #bdc3c7;
+}
+
+#header {
+    width: 100%;
+    height: 100%;
+}
+
+#calculator {
+    text-align: left;
+}
+
+table, th, tr{
+    border: 1px solid;
+}
