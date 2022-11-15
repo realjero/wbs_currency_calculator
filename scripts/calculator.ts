@@ -11,13 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         curr1.value = curr2.value;
         curr2.value = temp;
-        exchange_rate.value = String(1 / +exchange_rate.value);
+        exchange_rate.value = String((1 / +exchange_rate.value).toFixed(4));
 
         document.getElementById('exchange_rate_label').textContent = 'Exchange rate ' + curr1.value + ' / ' + curr2.value + ' = ' + (+exchange_rate.value).toFixed(4);
         buildTable(table, curr1, curr2, exchange_rate);
     });
 
     document.getElementById("calculate_table").addEventListener('click', () => {
+        exchange_rate.value = String((+exchange_rate.value).toFixed(4));
         buildTable(table, curr1, curr2, exchange_rate);
     });
 });
