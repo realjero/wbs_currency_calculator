@@ -1,12 +1,12 @@
 
-// Check if DOM CONTENT LOADED
+// CHECK FOR DOM DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     const curr1 = document.getElementById('curr1') as HTMLInputElement;
     const curr2 = document.getElementById("curr2") as HTMLInputElement;
     const exchange_rate = document.getElementById("exchange_rate") as HTMLInputElement;
     const table = document.getElementById("currency_table") as HTMLTableElement;
 
-    // CLICK EVENT ON SWAP CURRENCY
+    // CLICK EVENT ON swap_currency_button
     document.getElementById("swap_currency_button").addEventListener('click', () => {
         const temp = curr1.value;
 
@@ -22,8 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         buildTable(table, curr1, curr2, exchange_rate);
     });
 
-    // CALCULATE TABLE
-    document.getElementById("calculate_table").addEventListener('click', () => {
+    // CLICK EVENT ON calculate_table_button
+    document.getElementById("calculate_table_button").addEventListener('click', () => {
+        // CHANGE CONTENT OF exchange_rate_label WITH FIXED LENGTH OF 4
+        document.getElementById('exchange_rate_label').textContent = 'Exchange rate ' + curr1.value + ' / ' + curr2.value + ' = ' + (+exchange_rate.value).toFixed(4);
+
         // FIXED LENGTH OF 4
         exchange_rate.value = String((+exchange_rate.value).toFixed(4));
         buildTable(table, curr1, curr2, exchange_rate);
